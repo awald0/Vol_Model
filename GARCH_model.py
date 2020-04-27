@@ -96,7 +96,10 @@ def _get_best_model(TS):
 
 
 #mydata = quandl.get('WIKI/BRK_A',rows=1001)
-mydata = pd.read_csv('/Users/alexanderwald/Dropbox/Vol_Model/spx_data.csv')
+#save data file as spx_data.csv in same directory as script
+mydata_dir = os.path.dirname(os.path.abspath(__file__))
+mydata_file = mydata_dir + '/spx_data.csv'
+mydata = pd.read_csv(mydata_file)
 mydata['Date'] = pd.to_datetime(mydata['Date'])
 mydata = mydata.set_index('Date')
 mydata = 100 * mydata['Close'].pct_change().dropna()
