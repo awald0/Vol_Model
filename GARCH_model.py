@@ -203,7 +203,8 @@ vx1 = vx1[vx1!=0].loc[:split_date]
 vx1.plot(ax=ax, style='b-', label='VX1 Future')
 
 #spot vix
-#vix1 = pd.read_csv('/Users/alexanderwald/Documents/VIX_data.csv')
+#myvix_file = mydata_dir + '/VIX_data.csv'
+#vix1 = pd.read_csv(myvix_file)
 #vix1['DATE'] = pd.to_datetime(vix1['DATE'])
 #vix1 = vix1.set_index('DATE')
 #vix1 = vix1['VIXCLS']
